@@ -1,6 +1,6 @@
 # Simple Lead Manager
 
-This project is a simple Lead Management API with a basic frontend to interact with it. It is built using Node.js, Express, Next.js, and MongoDB (Mongoose).
+This project is a simple Lead Management API with a basic frontend to interact with it. It is built using Node.js, Express, Next.js, and MySQL (Sequelize).
 
 ## Requirements
 
@@ -22,14 +22,14 @@ The frontend displays the list of leads from the API and has a simple form to ad
 
 ### Database
 
-The database used is MongoDB with Mongoose for ORM.
+The database used is MySQL with Sequelize for ORM.
 
 ## How to Run the Project Locally
 
 ### Prerequisites
 
 - Node.js (v14 or higher)
-- MongoDB
+- MySQL
 
 ### Steps
 
@@ -50,7 +50,7 @@ The database used is MongoDB with Mongoose for ORM.
         ```
     3. Create a `.env` file in the `backend` directory with the following content:
         ```env
-        MONGODB_URI=<your-mongodb-uri>
+        DATABASE_URL=mysql://<username>:<password>@localhost:3306/leadmanager
         PORT=5000
         ```
     4. Run the backend server:
@@ -67,7 +67,11 @@ The database used is MongoDB with Mongoose for ORM.
         ```sh
         npm install
         ```
-    3. Run the frontend server:
+    3. Create a `.env.local` file in the `frontend` directory with the following content:
+        ```env
+        NEXT_PUBLIC_API_URL=http://localhost:5000/leads
+        ```
+    4. Run the frontend server:
         ```sh
         npm run dev
         ```
@@ -76,17 +80,3 @@ The database used is MongoDB with Mongoose for ORM.
 
 - Backend API: `http://localhost:5000`
 - Frontend: `http://localhost:3000`
-
-### Optional Deployment
-
-- Deploy the frontend to Vercel.
-- Deploy the backend to Railway, Render, or Heroku.
-
-## Submission
-
-- [GitHub Repo](https://github.com/NathnaelYimer/-Simple-Lead-Manager-project)
-- (Optional) [Live Link](<deployed-url>)
-
-## License
-
-This project is licensed under the MIT License.
