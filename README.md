@@ -39,31 +39,38 @@ The database used is MongoDB with Mongoose for ORM.
     cd -Simple-Lead-Manager-project
     ```
 
-2. Install dependencies for both frontend and backend:
-    ```sh
-    cd backend
-    npm install
-    cd ../frontend
-    npm install
-    ```
+2. Set Up the Backend:
+    1. Navigate to the `backend` directory:
+        ```sh
+        cd backend
+        ```
+    2. Install the dependencies:
+        ```sh
+        npm install
+        ```
+    3. Create a `.env` file in the `backend` directory with the following content:
+        ```env
+        MONGODB_URI=<your-mongodb-uri>
+        PORT=5000
+        ```
+    4. Run the backend server:
+        ```sh
+        npm run dev
+        ```
 
-3. Set up environment variables. Create a `.env` file in the `backend` directory with the following content:
-    ```env
-    MONGODB_URI=<your-mongodb-uri>
-    PORT=5000
-    ```
-
-4. Run the backend:
-    ```sh
-    cd backend
-    npm run dev
-    ```
-
-5. Run the frontend:
-    ```sh
-    cd frontend
-    npm run dev
-    ```
+3. Set Up the Frontend:
+    1. Navigate to the `frontend` directory:
+        ```sh
+        cd ../frontend
+        ```
+    2. Install the dependencies:
+        ```sh
+        npm install
+        ```
+    3. Run the frontend server:
+        ```sh
+        npm run dev
+        ```
 
 ### Access the Application
 
